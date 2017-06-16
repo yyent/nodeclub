@@ -6,11 +6,11 @@ var path = require('path');
 
 var config = {
   // debug 为 true 时，用于本地调试
-  debug: true,
+  debug: false,
 
   get mini_assets() { return !this.debug; }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-  name: 'cld.live -- 藏龙岛生活社区', // 社区名字
+  name: 'cld.live -- 藏龙岛生活', // 社区名字
   description: '岛民自己的论坛', // 社区的描述
   keywords: '藏龙岛，楼市，教育，生活',
 
@@ -35,10 +35,10 @@ var config = {
   cnzz_tracker_id: '',
 
   // mongodb 配置
-  db: 'mongodb://127.0.0.1/node_club_dev',
+  db: 'mongodb://172.16.16.119/node_club',
 
   // redis 配置，默认是本地
-  redis_host: '127.0.0.1',
+  redis_host: '172.16.16.119',
   redis_port: 6379,
   redis_db: 0,
   redis_password: '',
@@ -54,7 +54,7 @@ var config = {
 
   // RSS配置
   rss: {
-    title: 'cld.live -- 藏龙岛生活社区',
+    title: 'cld.live -- 藏龙岛生活',
     link: 'https://cld.live',
     language: 'zh-cn',
     description: '岛民自己的论坛',
@@ -135,7 +135,7 @@ var config = {
 };
 
 if (process.env.NODE_ENV === 'test') {
-  config.db = 'mongodb://127.0.0.1/node_club_test';
+  config.db = 'mongodb://172.16.16.119/node_club_test';
 }
 
 module.exports = config;
