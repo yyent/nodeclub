@@ -10,8 +10,8 @@ var config = {
 
   get mini_assets() { return !this.debug; }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-  name: 'cld.live -- 藏龙岛生活', // 社区名字
-  description: '岛民自己的论坛', // 社区的描述
+  name: 'cld.life -- 藏龙岛生活', // 社区名字
+  description: '【藏龙岛】岛民自己的论坛', // 社区的描述
   keywords: '藏龙岛，楼市，教育，生活',
 
   // 添加到 html head 中的信息
@@ -28,7 +28,7 @@ var config = {
   // cdn host，如 http://cnodejs.qiniudn.com
   site_static_host: '', // 静态文件存储域名
   // 社区的域名
-  host: 'cld.live',
+  host: 'cld.life',
   // 默认的Google tracker ID，自有站点请修改，申请地址：http://www.google.com/analytics/
   google_tracker_id: '',
   // 默认的cnzz tracker ID，自有站点请修改
@@ -54,8 +54,8 @@ var config = {
 
   // RSS配置
   rss: {
-    title: 'cld.live -- 藏龙岛生活',
-    link: 'https://cld.live',
+    title: 'cld.life -- 藏龙岛生活',
+    link: 'https://cld.life',
     language: 'zh-cn',
     description: '岛民自己的论坛',
     //最多获取的RSS Item数量
@@ -116,9 +116,11 @@ var config = {
 
   // 版块
   tabs: [
-    ['share', '分享'],
-    ['ask', '问答'],
-    ['job', '招聘'],
+    ['news', '新网'],
+    ['fang', '楼市'],
+    ['education', '教育'],
+    ['fun', '吃喝玩乐'],
+    ['ask', '问答']
   ],
 
   // 极光推送
