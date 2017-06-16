@@ -116,7 +116,7 @@ var config = {
 
   // 版块
   tabs: [
-    ['news', '新网'],
+    ['news', '新闻'],
     ['fang', '楼市'],
     ['education', '教育'],
     ['fun', '吃喝玩乐'],
