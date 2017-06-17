@@ -15,7 +15,7 @@ var TopicCollect = require('../proxy').TopicCollect;
 var EventProxy   = require('eventproxy');
 var tools        = require('../common/tools');
 var store        = require('../common/store');
-var config       = require('../config');
+var config       = require('config');
 var _            = require('lodash');
 var cache        = require('../common/cache');
 var logger = require('../common/logger')
@@ -444,6 +444,7 @@ exports.de_collect = function (req, res, next) {
 };
 
 exports.upload = function (req, res, next) {
+    console.log('update file');
   var isFileLimit = false;
   req.busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
       file.on('limit', function () {

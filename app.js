@@ -6,7 +6,7 @@
  * Module dependencies.
  */
 
-var config = require('./config');
+var config = require('config');
 
 if (!config.debug && config.oneapm_key) {
   require('oneapm');

@@ -1,4 +1,4 @@
-var config = require('../config');
+var config = require('config');
 var cache  = require('../common/cache');
 var moment = require('moment');
 

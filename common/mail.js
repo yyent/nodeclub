@@ -1,6 +1,6 @@
 var mailer        = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
-var config        = require('../config');
+var config        = require('config');
 var util          = require('util');
 var logger = require('./logger');
 var transporter     = mailer.createTransport(smtpTransport(config.mail_opts));
@@ -12,9 +12,6 @@ var async = require('async')
  * @param {Object} data 邮件对象
  */
 var sendMail = function (data) {
-  if (config.debug) {
-    return;
-  }
 
   // 重试5次
   async.retry({times: 5}, function (done) {

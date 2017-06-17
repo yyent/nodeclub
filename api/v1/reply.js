@@ -5,7 +5,7 @@ var User       = require('../../proxy').User;
 var Reply      = require('../../proxy').Reply;
 var at         = require('../../common/at');
 var message    = require('../../common/message');
-var config     = require('../../config');
+var config     = require('config');
 
 var create = function (req, res, next) {
   var topic_id = req.params.topic_id;
@@ -25,7 +25,7 @@ var create = function (req, res, next) {
     res.status(400);
     return res.send({success: false, error_msg: '不是有效的话题id'});
   }
-  
+
   Topic.getTopic(topic_id, ep.done(function (topic) {
     if (!topic) {
       res.status(404);
@@ -85,7 +85,7 @@ var ups = function (req, res, next) {
     res.status(400);
     return res.send({success: false, error_msg: '不是有效的评论id'});
   }
-  
+
   Reply.getReplyById(replyId, function (err, reply) {
     if (err) {
       return next(err);

@@ -7,7 +7,7 @@ var replyController   = require('./api/v1/reply');
 var messageController = require('./api/v1/message');
 var middleware        = require('./api/v1/middleware');
 var limit             = require('./middlewares/limit');
-var config            = require('./config');
+var config            = require('config');
 
 var router            = express.Router();
 

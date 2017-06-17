@@ -4,7 +4,7 @@ var TopicProxy   = require('../../proxy').Topic;
 var TopicCollect = require('../../proxy').TopicCollect;
 var UserProxy    = require('../../proxy').User;
 var UserModel    = models.User;
-var config       = require('../../config');
+var config       = require('config');
 var eventproxy   = require('eventproxy');
 var _            = require('lodash');
 var at           = require('../../common/at');
@@ -237,4 +237,3 @@ exports.update = function (req, res, next) {
     }
   });
 };
-

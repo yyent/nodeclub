@@ -10,7 +10,7 @@
 
 var request = require('supertest');
 var app = require('../../app');
-var config = require('../../config');
+var config = require('../.config');
 
 describe('test/controllers/rss.test.js', function () {
 
