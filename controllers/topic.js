@@ -444,7 +444,6 @@ exports.de_collect = function (req, res, next) {
 };
 
 exports.upload = function (req, res, next) {
-    console.log('update file');
   var isFileLimit = false;
   req.busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
       file.on('limit', function () {

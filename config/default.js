@@ -102,7 +102,7 @@ module.exports = {
     // 文件上传配置
     // 注：如果填写 qn_access，则会上传到 7牛，以下配置无效
     upload: {
-        path: path.join(__dirname, 'public/upload/'),
+        path: path.join(__dirname, '../public/upload/'),
         url: '/public/upload/'
     },
 
@@ -113,8 +113,7 @@ module.exports = {
         ['news', '新闻'],
         ['fang', '楼市'],
         ['education', '教育'],
-        ['fun', '吃喝玩乐'],
-        ['ask', '问答']
+        ['fun', '吃喝玩乐']
     ],
 
     // 极光推送
