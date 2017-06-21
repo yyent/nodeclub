@@ -71,8 +71,7 @@ module.exports = {
     weibo_key: 10000000,
     weibo_id: '312460629',
 
-    // admin 可删除话题，编辑标签。把 user_login_name 换成你的登录名
-    admins: { user_login_name: 'peter' },
+    admins: ['peter', 'dameng'],
 
     // github 登陆的配置
     GITHUB_OAUTH: {
