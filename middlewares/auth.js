@@ -81,7 +81,7 @@ exports.authUser = function (req, res, next) {
     }
     user = res.locals.current_user = req.session.user = new UserModel(user);
 
-    if (user.loginname.indexOf(config.admins) !== -1) {
+    if (config.admins.indexOf(user.loginname) !== -1) {
       user.is_admin = true;
     }
 
